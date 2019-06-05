@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+    <script src="js/user-import.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background: #45ADEF !important">
+    <!--[if lt IE 8]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
+        your experience.
+      </p>
+    <![endif]-->
+
+    <div class="container">
+      <div class="table">
+        <div class="table-cell">
+          <div class="row">
+            <div class="col-xs-12">
+              <header class="text-center">
+                <a href="https://blueapache.com">
+                  <img src="img/blueapache-logo.png" />
+                </a>
+              </header>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-md-12">
+              <label for="OrgSearch">Search Org</label>
+              <input
+                type="text"
+                id="OrgSearch"
+                class="form-control"
+                placeholder="Org Name (min 5 chars)"
+                onInput="refreshOrgList(this, document.getElementById('OrgList'))"
+              />
+            </div>
+            <div class="form-group col-md-12">
+              <label for="OrgList">Select Org</label>
+              <select
+                id="OrgList"
+                class="form-control"
+                onChange="refreshGrpList(this, document.getElementById('GrpList'));"
+              >
+              </select>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="GrpList">Select Group</label>
+
+              <select id="GrpList" class="form-control"> </select>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="UserList">Upload CSV (<a href="user-import.csv">template</a>)</label>
+              <input
+                type="file"
+                id="UserList"
+                class="form-control file-upload"
+                onChange="processUsers(this)"
+              />
+            </div>
+            <div class="form-group col-md-12"></div>
+            <div class="form-group col-md-12">
+                <label for="ConfirmBtn">Confirm Changes</label>
+
+              <button id="ConfirmBtn" class="form-control" onClick="createUsers()" disabled>Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /container -->
+  </body>
+</html>
