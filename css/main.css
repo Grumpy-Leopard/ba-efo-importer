@@ -1,0 +1,126 @@
+/* ==========================================================================
+   bootstrap custom styles
+   ========================================================================== */
+    .container .jumbotron, .container-fluid .jumbotron {
+        padding-left: 5px;
+        padding-right: 5px;
+        background: #FFFFFF;
+        padding: 15px 0px;
+        border-radius: 3px;
+    }
+
+
+/* ==========================================================================
+   blueApache custom styles
+   ========================================================================== */
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background: url("../img/bg.png") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+
+        position: fixed;
+        top:0px;
+        right:0px;
+        bottom:0px;
+        left:0px;
+    }
+
+    body > .container {
+        height: 100%;
+    }
+
+    .table {
+        display: table;
+        height: 100%;
+        width: 100%;
+    }
+
+    .table-cell {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    header {
+        margin-bottom: 6em;
+    }
+    header a {
+        max-width: 100%;
+        display: inline;
+    }
+    header a img {
+        width: 360px;
+        max-width: 100%;
+    }
+    .main {
+        margin-bottom: 250px;
+        display: inline-block;
+        width: 100%;
+    }
+
+    /* jumbotron link styles */
+    a {
+        /*@ba-dark-blue: #2a3d52;*/
+        /*@ba-mid-blue: #2c6eb4;*/
+        /*@ba-light-blue: #79bfe9;*/
+        color: #2c6eb4;
+    }
+
+    a:hover, a:hover .jumbotron span {
+        color: #FFFFFF;
+    }
+    a:hover .jumbotron {
+        background: #2c6eb4;
+    }
+    .jumbotron {
+        border: 1px solid #FFFFFF;
+    }
+    .jumbotron i {
+        font-size: 2.5em;
+        margin-right: 10px;
+    }
+    .jumbotron span {
+        font-size: 18px;
+        font-weight: 600;
+        color: #2a3d52;
+        display: inline-block;
+        position:relative;
+        bottom: 5px;
+    }
+
+
+@media screen and (max-width: 1199px) {
+    .table {
+        display: block;
+        margin-top: 50px;
+    }
+
+    .table-cell {
+        display:block;
+    }
+
+
+    .jumbotron i {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 991px) {
+    .jumbotron i {
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+}
+
+
+
+
+
+
+
+
