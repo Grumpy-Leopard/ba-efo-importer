@@ -1,4 +1,5 @@
 {
+  "about": [{ "readMoreAt": "https://my-json-server.typicode.com/" }],
   "org-search": [
     {
       "orgId": "ORG0001",
