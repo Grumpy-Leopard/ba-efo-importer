@@ -1,0 +1,20 @@
+{
+    "org": [
+        {
+            "search": [
+                {
+                  "orgId": "1001ABCDE0001",
+                  "orgName": "Example 1"
+                },
+                {
+                  "orgId": "1001ABCDE0002",
+                  "orgName": "Example 2"
+                },
+                {
+                  "orgId": "1001ABCDE0002",
+                  "orgName": "Example 3"
+                }
+              ]
+        }
+    ]
+}
