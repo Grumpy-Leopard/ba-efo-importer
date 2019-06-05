@@ -3,6 +3,8 @@ var api_base =
 var org_search_endpoint = "/org-search";
 var grp_search_endpoint = "/group-search";
 
+// TODO: CSRF stuff
+
 var org_search_uri = api_base + org_search_endpoint + "?search=";
 var grp_search_uri = api_base + grp_search_endpoint;
 
@@ -94,6 +96,8 @@ function processUsers(control, display) {
 
           result.push(obj);
         }
+
+        display.innerHTML = "";
 
         result.forEach(user => {
           if (validateUserRecord(user)) {
