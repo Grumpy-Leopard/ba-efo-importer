@@ -28,7 +28,6 @@ function refreshOrgList(input, dropdown) {
         option.text = item.orgName;
         dropdown.add(option);
       });
-
     } else {
       console.log("Search too short");
     }
@@ -69,4 +68,72 @@ async function searchGrp(orgId) {
   const response = await fetch(grp_search_uri);
   const json = await response.json();
   return json;
+}
+
+function processUsers(control, display) {
+  var regex = /^([a-zA-Z0-9\s_\\.\-:])+(.csv|.txt)$/;
+
+  if (regex.test(control.value.toLowerCase())) {
+    if (typeof FileReader != "undefined") {
+      var reader = new FileReader();
+
+      reader.onload = function(e) {
+        var lines = e.target.result.split("\n");
+
+        var result = [];
+
+        var headers = lines[0].split(",");
+
+        for (var i = 1; i < lines.length; i++) {
+          var obj = {};
+          var currentline = lines[i].split(",");
+
+          for (var j = 0; j < headers.length; j++) {
+            obj[headers[j]] = currentline[j];
+          }
+
+          result.push(obj);
+        }
+
+        result.forEach(user => {
+          if (validateUserRecord(user)) {
+            row = display.insertRow();
+
+            cell = row.insertCell();
+            cell.innerHTML = user.firstName;
+
+            cell = row.insertCell();
+            cell.innerHTML = user.lastName;
+
+            cell = row.insertCell();
+            cell.innerHTML = user.emailAddress;
+          }
+        });
+
+        //return result; //JavaScript object
+        console.log(result); //JSON
+      };
+
+      reader.readAsText(control.files[0]);
+    } else {
+      alert("This browser does not support HTML5.");
+    }
+  } else {
+    alert("Please upload a valid CSV file.");
+  }
+}
+
+function validateUserRecord(user) {
+  // User needs at least a name and email address
+  if (typeof user.firstName == "undefined") {
+    return false;
+  }
+  if (typeof user.lastName == "undefined") {
+    return false;
+  }
+  if (typeof user.emailAddress == "undefined") {
+    return false;
+  }
+  // TODO more validation
+  return true;
 }

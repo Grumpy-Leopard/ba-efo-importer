@@ -86,10 +86,14 @@
                 type="file"
                 id="UserList"
                 class="form-control file-upload"
-                onChange="processUsers(this)"
+                onChange="processUsers(this, document.getElementById('UserListDisplay'))"
               />
             </div>
-            <div class="form-group col-md-12"></div>
+            <div class="table-responsive col-md-12">
+              <table class="table" id="UserListDisplay">
+                <thead><tr><td><b>First Name</b></td><td><b>Last Name</b></td><td><b>Email Address</b></td></tr></thead>
+              </table>
+            </div>
             <div class="form-group col-md-12">
                 <label for="ConfirmBtn">Confirm Changes</label>
 

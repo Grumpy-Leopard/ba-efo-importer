@@ -1,0 +1,2 @@
+﻿salutation,firstName,lastName,emailAddress,priPhone,altPhone,faxPhone,cellPhone,pager,title,reportsTo,address1,address2,city,state,postcode,country,comments,skillLevel,afterHoursAuthorised,macsAuthorised,procurementAuthorised,authorisationNotes
+Dr,Fred,Flintstone,fred@example.com,03 8696 9369,,,,,Senior Custodial Engineer,Betty Flintstone,Ground,301 Cobblestone Way,Bedrock,Victoria,3067,Australia,EXAMPLE ONLY,Average,FALSE,FALSE,FALSE,EXAMPLE ONLY
