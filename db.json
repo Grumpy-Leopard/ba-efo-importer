@@ -1,16 +1,63 @@
 {
   "org-search": [
     {
-      "orgId": "1001ABCDE0001",
-      "orgName": "Example 1"
+      "orgId": "ORG0001",
+      "orgName": "Example Org 1"
     },
     {
-      "orgId": "1001ABCDE0002",
-      "orgName": "Example 2"
+      "orgId": "ORG0002",
+      "orgName": "Example Org 2"
     },
     {
-      "orgId": "1001ABCDE0002",
-      "orgName": "Example 3"
+      "orgId": "ORG0003",
+      "orgName": "Example Org 3"
+    }
+  ],
+  "group-search": [
+    {
+      "groupId": "GRP0001",
+      "groupName": "Org1 Group 1",
+      "orgId": "ORG0001"
+    },
+    {
+      "groupId": "GRP0002",
+      "groupName": "Org1 Group 2",
+      "orgId": "ORG0001"
+    },
+    {
+      "groupId": "GRP0003",
+      "groupName": "Org1 Group 3",
+      "orgId": "ORG0001"
+    },
+    {
+      "groupId": "GRP0004",
+      "groupName": "Org2 Group 1",
+      "orgId": "ORG0002"
+    },
+    {
+      "groupId": "GRP0005",
+      "groupName": "Org2 Group 2",
+      "orgId": "ORG0002"
+    },
+    {
+      "groupId": "GRP0006",
+      "groupName": "Org2 Group 3",
+      "orgId": "ORG0002"
+    },
+    {
+      "groupId": "GRP0007",
+      "groupName": "Org3 Group 1",
+      "orgId": "ORG0003"
+    },
+    {
+      "groupId": "GRP0008",
+      "groupName": "Org3 Group 2",
+      "orgId": "ORG0003"
+    },
+    {
+      "groupId": "GRP0009",
+      "groupName": "Org3 Group 3",
+      "orgId": "ORG0003"
     }
   ]
 }
