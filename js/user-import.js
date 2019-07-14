@@ -9,6 +9,7 @@ var org_search_uri = api_base + org_search_endpoint + "?search=";
 var grp_search_uri = api_base + grp_search_endpoint;
 
 var searchTimer;
+var csrfToken;
 
 function refreshOrgList(input, dropdown) {
   searchtext = input.value;
